@@ -351,7 +351,7 @@ span {
 }
 
 .titleTools {
-  font-family:'Times New Roman', Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--light-grey-text);
   background-color: var(--light-navy);
   border-radius: 15px;
@@ -375,6 +375,7 @@ span {
 .iconDiv {
   margin: 10px;
   padding-bottom: 5px;
+  margin-bottom: 2.5vh;
 }
 
 .iconDiv:hover {
@@ -486,6 +487,8 @@ span {
 @media(pointer: coarse) {
   .iconDiv {
     border-radius: 15px;
+    padding-top: 2vh;
+    margin-bottom: 2.5vh;
   }
 
   .iconDiv:hover {
@@ -499,7 +502,8 @@ span {
   
   #html::before {
     content:"HTML";
-    color: var(--light-navy)
+    color: var(--light-navy);
+    font-size: 1.1em;
   }
   
   #html::after {
@@ -511,6 +515,7 @@ span {
   }
   
   #css::before {
+    font-size: 1.1em;
     content:"CSS";
     color: var(--light-navy);
   }
@@ -524,6 +529,7 @@ span {
   }
   
   #js::before {
+    font-size: 1.1em;
     content:"JavaScript";
     color: var(--light-navy);
   }
@@ -537,6 +543,7 @@ span {
   }
   
   #react::before {
+    font-size: 1.1em;
     content:"React";
     color: var(--light-navy);
   }
@@ -551,21 +558,25 @@ span {
   }
   
   #docker::before {
+    font-size: 1.1em;
     content:"Docker";
     color: var(--light-navy);
   }
   
   #mysql::before {
+    font-size: 1.1em;
     content:"MySQL";
     color: var(--light-navy);
   }
   
   #bash::before {
+    font-size: 1.1em;
     content:"Bash";
     color: var(--light-navy);
   }
   
   #github::before {
+    font-size: 1.1em;
     content:"GitHub";
     color: var(--light-navy);
   }
@@ -579,6 +590,7 @@ span {
   }
   
   #scrum::before {
+    font-size: 1.1em;
     content:"SCRUM";
     color: var(--light-navy);
   }
@@ -592,6 +604,7 @@ span {
   }
   
   #jest::before {
+    font-size: 1.1em;
     content:"Jest";
     color: var(--light-navy);
   }
@@ -614,6 +627,7 @@ span {
   background-color: var(--blue);
   z-index: -1;
 }
+
 #education::after {
   position: absolute;
   content: '';

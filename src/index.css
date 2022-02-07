@@ -345,7 +345,7 @@ span {
   margin-right: 2.5vw;
   margin-left: 2.5vw;
   text-align: center;
-  border: solid var(--orange) 2px;
+  border: solid var(--dark-navy) 2px;
   border-radius: 15px;
   margin-bottom: 3vh;
 }
@@ -361,7 +361,7 @@ span {
 }
 
 .icons {
-  filter: brightness(0) saturate(100%) invert(61%) sepia(82%) saturate(3585%) hue-rotate(331deg) brightness(97%) contrast(94%);
+  filter: brightness(0) saturate(100%) invert(17%) sepia(15%) saturate(941%) hue-rotate(177deg) brightness(96%) contrast(93%);
   display: flex;
   flex-direction: column;
   width: 6vh;
@@ -377,6 +377,9 @@ span {
   padding-bottom: 5px;
   margin-bottom: 2.5vh;
 }
+.iconDiv:hover .icons {
+  filter: brightness(0) saturate(100%) invert(43%) sepia(32%) saturate(3208%) hue-rotate(337deg) brightness(112%) contrast(88%);
+}
 
 .iconDiv:hover {
   background-color: var(--blue);
@@ -388,12 +391,9 @@ span {
   color: var(--light-grey-text)
 }
 
-#html:hover::after{
-  content:"Semantic";
-  color: var(--light-grey-text);
-  font-size: 0.8em;
-  position: relative;
-  bottom: 3px;
+#html:hover {
+  content:"HTML";
+  color: var(--light-grey-text)
 }
 
 #css:hover::before {
@@ -401,41 +401,17 @@ span {
   color: var(--light-grey-text)
 }
 
-#css:hover::after {
-  content:"Responsive";
-  white-space: pre;
-  color: var(--light-grey-text);
-  font-size: 0.8em;
-  position: relative;
-  bottom: 3px;
-}
-
 #js:hover::before {
   content:"JavaScript";
   color: var(--light-grey-text)
 }
 
-#js:hover::after {
-  content:"DOM";
-  color: var(--light-grey-text);
-  font-size: 0.8em;
-  position: relative;
-  bottom: 3px;
-}
 
 #react:hover::before {
   content:"React";
   color: var(--light-grey-text)
 }
 
-#react:hover::after{
-  content:"Functional Component; \A Class Components; \A Redux; \A Context API/Hooks; \A React Testing Library.";
-  white-space: pre;
-  color: var(--light-grey-text);
-  font-size: 0.8em;
-  position: relative;
-  bottom: 3px;
-}
 
 #docker:hover::before {
   content:"Docker";
@@ -458,26 +434,11 @@ span {
   color: var(--light-grey-text)
 }
 
-#github:hover::after {
-  content:"Git";
-  color: var(--light-grey-text);
-  font-size: 0.8em;
-  position: relative;
-  bottom: 3px;
-}
-
 #scrum:hover::before {
   content:"SCRUM";
   color: var(--light-grey-text)
 }
 
-#scrum:hover::after {
-  content:"Kanban";
-  color: var(--light-grey-text);
-  font-size: 0.8em;
-  position: relative;
-  bottom: 3px;
-}
 
 #jest:hover::before{
   content:"Jest";
@@ -496,9 +457,10 @@ span {
     border-radius: 15px;
   }
 
-  .iconDiv .icons {
-    filter: brightness(0) saturate(100%) invert(12%) sepia(5%) saturate(4885%) hue-rotate(178deg) brightness(88%) contrast(79%);
+  .iconDiv:hover .icons{
+    filter: brightness(0) saturate(100%) invert(17%) sepia(15%) saturate(941%) hue-rotate(177deg) brightness(96%) contrast(93%);
   }
+
   
   #html::before {
     content:"HTML";
@@ -506,55 +468,23 @@ span {
     font-size: 1.1em;
   }
   
-  #html::after {
-    content:"Semantic";
-    color: var(--light-navy);
-    font-size: 0.8em;
-    position: relative;
-    bottom: 3px;
-  }
   
   #css::before {
     font-size: 1.1em;
     content:"CSS";
     color: var(--light-navy);
   }
-  
-  #css::after {
-    content:"Responsive";
-    color: var(--light-navy);
-    font-size: 0.8em;
-    position: relative;
-    bottom: 3px;
-  }
-  
+
   #js::before {
     font-size: 1.1em;
     content:"JavaScript";
     color: var(--light-navy);
   }
   
-  #js::after {
-    content:"DOM";
-    color: var(--light-navy);
-    font-size: 0.8em;
-    position: relative;
-    bottom: 3px;
-  }
-  
   #react::before {
     font-size: 1.1em;
     content:"React";
     color: var(--light-navy);
-  }
-  
-  #react::after {
-    content:"Functional Component; \A Class Components; \A Redux; \A Context API/Hooks; \A React Testing Library.";
-    white-space: pre;
-    color: var(--light-navy);
-    font-size: 0.8em;
-    position: relative;
-    bottom: 3px;
   }
   
   #docker::before {
@@ -580,29 +510,13 @@ span {
     content:"GitHub";
     color: var(--light-navy);
   }
-  
-  #github::after {
-    content:"Git";
-    color: var(--light-navy);
-    font-size: 0.8em;
-    position: relative;
-    bottom: 3px;
-  }
-  
+
   #scrum::before {
     font-size: 1.1em;
     content:"SCRUM";
     color: var(--light-navy);
   }
-  
-  #scrum::after {
-    content:"Kanban";
-    color: var(--light-navy);
-    font-size: 0.8em;
-    position: relative;
-    bottom: 3px;
-  }
-  
+
   #jest::before {
     font-size: 1.1em;
     content:"Jest";
@@ -717,6 +631,18 @@ span {
 .projectTitle {
   margin-top: 2vh;
   margin-bottom: 5vh;
+  font-size: 5vh;
+}
+
+.projectTitle::after {
+  content: '';
+  display: block;
+  width: 70vw;
+  height: 2px;
+  background-color: var(--orange);
+  margin-top: 3vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #cardsDiv {
@@ -747,6 +673,7 @@ span {
   display: flex;
   overflow: hidden;
   transition: transform 500ms ease;
+  box-shadow: 5px 3px 3px var(--light-navy);
 }
 
 .card:hover, .card:focus-within {
@@ -824,7 +751,7 @@ span {
   position:relative;
   right: 0.5vw;
   top: 3vh;
-  background-color: var(--orange);
+  background-color: var(--light-grey-text);
   border-radius: 50%;
   margin: 0.2vw;
   margin-bottom: 1vh;

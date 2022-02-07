@@ -68,8 +68,8 @@ function App() {
           <section id="about">
             <h1 class="sectionTitle">About</h1>
             <div id="aboutTextDiv">
-              <p class="aboutText">I'm a former civil engineer who was missing the thrill of programming, then decided to change careers.</p>
-              <p class="aboutText">Today I am a <span>full-stack web developer</span> formed by Trybe.</p>
+              <p class="aboutText">I'm a civil engineer who discovered the thrill of programming, then decided to change careers.</p>
+              <p class="aboutText">Today I am a <span>full-stack web developer</span> ready to help you out.</p>
             </div>
             <h2 id="sectionSubTitle">Tool's Box</h2>
             <div id="boxsDivs">
@@ -152,7 +152,7 @@ function App() {
             <h1 class="projectTitle">Projects</h1>
             <div id="cardsDiv">
               <div class="sectorDiv">
-                <h1>Front End Projects</h1>
+                <h1 class="projectDivsCard">Front End Projects</h1>
                 <div class="cardLimits">
                   <div class="card">
                     <div class="cardContent">
@@ -183,7 +183,7 @@ function App() {
                 </div>
               </div>
               <div class="sectorDiv">
-                <h1>Back End Projects</h1>
+                <h1 class="projectDivsCard">Back End Projects</h1>
                 <div class="cardLimits">
                   <div class="card">
                     <div class="cardContent">
@@ -214,7 +214,7 @@ function App() {
                 </div>
               </div>
               <div class="sectorDiv">
-                <h1>Tests Projects</h1>
+                <h1 class="projectDivsCard">Tests Projects</h1>
                 <div class="cardLimits">
                   <div class="card">
                     <div class="cardContent">

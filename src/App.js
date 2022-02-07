@@ -21,7 +21,7 @@ function App() {
           <ul id="menu">
             <a href="#about">
               <li>
-                About Me
+                About
               </li>
             </a>
             <a href="#education">
@@ -37,6 +37,11 @@ function App() {
             <a href="#contact">
               <li>
                 Contact
+              </li>
+            </a>
+            <a href="#top">
+              <li>
+                Top
               </li>
             </a>
           </ul>

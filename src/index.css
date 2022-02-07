@@ -8,6 +8,7 @@
 
 a {
   text-decoration: none;
+  color: var(--light-grey-text);
 }
 
 @supports(scrollbar-color: var(--blue), #0d1117) {
@@ -45,7 +46,6 @@ html {
 header {
   position: fixed;
   width: 100%;
-  font-family: 'Zeyada', cursive;
   font-size: 1em;
   background-color: var(--dark-navy);
   color: var(--light-grey-text);
@@ -57,17 +57,13 @@ header {
 
 #nameOnHeader {
   color: var(--light-grey-text);
-  font-family: 'Zeyada', cursive;}
+  font-family: 'Zeyada', cursive;
+}
 
 main {
   position: absolute;
   z-index: 1;
   width: 100%;
-}
-
-#top {
-  text-decoration: none;
-  color: var(--light-grey-text);
 }
 
 #menu {
@@ -81,14 +77,11 @@ main {
   margin-top: 5px;
 }
 
-#menu a {
-  text-decoration: none;
-  color: var(--light-grey-text);
-  font-family: 'Zeyada', cursive;}
-
 #menu li {
-  padding-right: 20px;
-  font-family: poppins
+  padding-right: 10px;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 2vh;
+  margin-right: 15px;
 }
 
 #menu li:hover, #menu li:focus-within {
@@ -97,7 +90,7 @@ main {
 
 #welcome {
   z-index: 1;
-  background: linear-gradient(-45deg, #12171d, #25303d, #2f3c4d, var(--blue), #657fa1);
+  background: linear-gradient(45deg, #12171d, #25303d, #2f3c4d, var(--blue), #657fa1);
   width: 100%;
   min-height: 101vh;
   border-bottom: 3px solid var(--light-grey-text);
@@ -111,7 +104,7 @@ main {
   }
 
 #welcomeText {
-  font-size: 4em;
+  font-size: 3.5em;
   color: var(--light-grey-text);
   padding-left: 5vw;
 }
@@ -133,13 +126,9 @@ main {
   padding-left: 5vw;
 }
 
-.btnsAnchor {
-  text-decoration: none;
-}
-
 .welcomeBtns {
   margin-left: 1em;
-  font-size: 1.9em;
+  font-size: 1.6em;
   border-radius: 5px;
   padding: 0.2em;
   background-color: var(--dark-navy);
@@ -188,6 +177,7 @@ main {
 .sectionTitle {
   color: var(--dark-navy);
   margin-top: 5vh;
+  font-size: 5vh;
 }
 
 .sectionTitle::after {
@@ -209,8 +199,8 @@ main {
   text-align: center;
   margin-left: 5vw;
   margin-right: 5vw;
-  font-size: 1.5rem;
-  color: var(--light-navy);
+  font-size: 1.3rem;
+  color: var(--dark-navy);
   padding-bottom: 1em;
 }
 
@@ -222,9 +212,10 @@ span {
 
 #sectionSubTitle {
   position: absolute;
-  color: var(--light-navy);
+  color: var(--dark-navy);
   right: 5vw;
   margin-bottom: 5vh;
+  font-size: 4vh;
 }
 
 #sectionSubTitle::before {
@@ -243,13 +234,19 @@ span {
   }
 
   #menu {
-    font-size: 0.8em;
-    transform: translateY(-3vh);
+    font-size: 0.7em;
+    transform: translateY(-3.5vh);
+    padding-top: 5px;
+  }
+  #menu li {
+    padding-right: 10px;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 0vh;
   }
 
   header {
     display: block;
-    padding-bottom: 3.2vh;
+    padding-bottom: 1vh;
   }
 
   #welcome {
@@ -291,7 +288,6 @@ span {
 
   #myName {
     font-size: 3em;
-    color: var(--orange);
     padding-left: 5vw;
   }
 
@@ -339,26 +335,27 @@ span {
   flex-wrap: wrap;
   margin-right: 10vw;
   margin-left: 10vw;
-  margin-top: 10vh;
+  margin-top: 12vh;
   justify-content: center;
 }
 
 .tools {
+  font-family:Arial, Helvetica, sans-serif;
   width: 200px;
   margin-right: 2.5vw;
   margin-left: 2.5vw;
   text-align: center;
-  border: solid var(--orange) 4px;
+  border: solid var(--orange) 2px;
   border-radius: 15px;
   margin-bottom: 3vh;
 }
 
 .titleTools {
+  font-family:'Times New Roman', Times, serif;
   color: var(--light-grey-text);
   background-color: var(--light-navy);
-  border: solid var(--orange) 3px;
   border-radius: 15px;
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-top: 2vh;
   margin-bottom: 2vh;
 }
@@ -367,8 +364,8 @@ span {
   filter: brightness(0) saturate(100%) invert(61%) sepia(82%) saturate(3585%) hue-rotate(331deg) brightness(97%) contrast(94%);
   display: flex;
   flex-direction: column;
-  width: 7vw;
-  height: 7vh;
+  width: 6vh;
+  height: 6vh;
   margin-right: auto;
   margin-left: auto;
   margin-top: 1.5vh;
@@ -387,21 +384,19 @@ span {
 
 #html:hover::before {
   content:"HTML";
-  font-size: 1.5em;
   color: var(--light-grey-text)
 }
 
 #html:hover::after{
   content:"Semantic";
   color: var(--light-grey-text);
-  font-size: 1.1em;
+  font-size: 0.8em;
   position: relative;
   bottom: 3px;
 }
 
 #css:hover::before {
   content:"CSS";
-  font-size: 1.5em;
   color: var(--light-grey-text)
 }
 
@@ -409,28 +404,26 @@ span {
   content:"Responsive";
   white-space: pre;
   color: var(--light-grey-text);
-  font-size: 1.1em;
+  font-size: 0.8em;
   position: relative;
   bottom: 3px;
 }
 
 #js:hover::before {
-  content:"Javacript";
-  font-size: 1.5em;
+  content:"JavaScript";
   color: var(--light-grey-text)
 }
 
 #js:hover::after {
   content:"DOM";
   color: var(--light-grey-text);
-  font-size: 1.1em;
+  font-size: 0.8em;
   position: relative;
   bottom: 3px;
 }
 
 #react:hover::before {
   content:"React";
-  font-size: 1.5em;
   color: var(--light-grey-text)
 }
 
@@ -438,66 +431,60 @@ span {
   content:"Functional Component; \A Class Components; \A Redux; \A Context API/Hooks; \A React Testing Library.";
   white-space: pre;
   color: var(--light-grey-text);
-  font-size: 1.1em;
+  font-size: 0.8em;
   position: relative;
   bottom: 3px;
 }
 
 #docker:hover::before {
   content:"Docker";
-  font-size: 1.5em;
   color: var(--light-grey-text)
 }
 
 #mysql:hover::before {
   content:"MySQL";
-  font-size: 1.5em;
+  font-size: 0.8em;
   color: var(--light-grey-text)
 }
 
 #bash:hover::before{
   content:"Bash";
-  font-size: 1.5em;
   color: var(--light-grey-text)
 }
 
 #github:hover::before {
   content:"GitHub";
-  font-size: 1.5em;
   color: var(--light-grey-text)
 }
 
 #github:hover::after {
   content:"Git";
   color: var(--light-grey-text);
-  font-size: 1.1em;
+  font-size: 0.8em;
   position: relative;
   bottom: 3px;
 }
 
 #scrum:hover::before {
   content:"SCRUM";
-  font-size: 1.5em;
   color: var(--light-grey-text)
 }
 
 #scrum:hover::after {
   content:"Kanban";
   color: var(--light-grey-text);
-  font-size: 1.1em;
+  font-size: 0.8em;
   position: relative;
   bottom: 3px;
 }
 
 #jest:hover::before{
   content:"Jest";
-  font-size: 1.5em;
   color: var(--light-grey-text)
 }
 
 @media(pointer: coarse) {
   .iconDiv {
-    background-color: var(--orange);
     border-radius: 15px;
   }
 
@@ -512,110 +499,100 @@ span {
   
   #html::before {
     content:"HTML";
-    font-size: 1.5em;
     color: var(--light-navy)
   }
   
   #html::after {
     content:"Semantic";
-    color: var(--light-grey-text);
-    font-size: 1.1em;
+    color: var(--light-navy);
+    font-size: 0.8em;
     position: relative;
     bottom: 3px;
   }
   
   #css::before {
     content:"CSS";
-    font-size: 1.5em;
     color: var(--light-navy);
   }
   
   #css::after {
     content:"Responsive";
-    color: var(--light-grey-text);
-    font-size: 1.1em;
+    color: var(--light-navy);
+    font-size: 0.8em;
     position: relative;
     bottom: 3px;
   }
   
   #js::before {
-    content:"Javacript";
-    font-size: 1.5em;
+    content:"JavaScript";
     color: var(--light-navy);
   }
   
   #js::after {
     content:"DOM";
-    color: var(--light-grey-text);
-    font-size: 1.1em;
+    color: var(--light-navy);
+    font-size: 0.8em;
     position: relative;
     bottom: 3px;
   }
   
   #react::before {
     content:"React";
-    font-size: 1.5em;
     color: var(--light-navy);
   }
   
   #react::after {
     content:"Functional Component; \A Class Components; \A Redux; \A Context API/Hooks; \A React Testing Library.";
     white-space: pre;
-    color: var(--light-grey-text);
-    font-size: 1.1em;
+    color: var(--light-navy);
+    font-size: 0.8em;
     position: relative;
     bottom: 3px;
   }
   
   #docker::before {
     content:"Docker";
-    font-size: 1.5em;
     color: var(--light-navy);
   }
   
   #mysql::before {
     content:"MySQL";
-    font-size: 1.5em;
     color: var(--light-navy);
   }
   
   #bash::before {
     content:"Bash";
-    font-size: 1.5em;
     color: var(--light-navy);
   }
   
   #github::before {
     content:"GitHub";
-    font-size: 1.5em;
     color: var(--light-navy);
   }
   
   #github::after {
     content:"Git";
-    color: var(--light-grey-text);
-    font-size: 1.1em;
+    color: var(--light-navy);
+    font-size: 0.8em;
     position: relative;
     bottom: 3px;
   }
   
   #scrum::before {
     content:"SCRUM";
-    font-size: 1.5em;
     color: var(--light-navy);
   }
   
   #scrum::after {
     content:"Kanban";
-    color: var(--light-grey-text);
-    font-size: 1.1em;
+    color: var(--light-navy);
+    font-size: 0.8em;
     position: relative;
     bottom: 3px;
   }
   
   #jest::before {
     content:"Jest";
-    font-size: 1.5em;
     color: var(--light-navy);
   }
 }
@@ -654,11 +631,12 @@ span {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 15vh;
+  padding-top: 10vh;
 }
 
 #educationTitle {
   color: var(--light-grey-text);
+  font-size: 5vh;
 }
 
 #educationTitle::after {

@@ -1,38 +1,874 @@
-.App {
+:root {
+  --dark-navy: #0d1117;
+  --light-navy: #293240;
+  --light-grey-text: #c9d1d9;
+  --orange: #f06449;
+  --blue: #2f3c4d;
+}
+
+a {
+  text-decoration: none;
+}
+
+@supports(scrollbar-color: var(--blue), #0d1117) {
+  * {
+    scrollbar-color: var(--blue), #0d1117;
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0.8em;
+  background-color: var(--dark-navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--light-grey-text);
+  border-radius: 5px;
+  border: solid 2px var(--dark-navy);
+}
+
+::-webkit-scrollbar-thumb:hover {
+background-color: #4A5A69;
+}
+
+html {
+  scroll-padding-top: 6vh;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  font-family: 'Zeyada', cursive;
+  font-size: 1em;
+  background-color: var(--dark-navy);
+  color: var(--light-grey-text);
+  padding-left: 2vw;
+  display: flex;
+  top: 0;
+  z-index: 3;
+}
+
+#nameOnHeader {
+  color: var(--light-grey-text);
+  font-family: ze;
+}
+
+main {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+
+#top {
+  text-decoration: none;
+  color: var(--light-grey-text);
+}
+
+#menu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.2em;
+  position: absolute;
+  right: 0;
+  margin-top: 5px;
+}
+
+#menu a {
+  text-decoration: none;
+  color: var(--light-grey-text);
+  font-family: 'Zeyada', cursive;}
+
+#menu li {
+  padding-right: 20px;
+  font-family: poppins
+}
+
+#menu li:hover, #menu li:focus-within {
+  color: var(--orange);
+}
+
+#welcome {
+  z-index: 1;
+  background: linear-gradient(-45deg, #12171d, #25303d, #2f3c4d, var(--blue), #657fa1);
+  width: 100%;
+  min-height: 101vh;
+  border-bottom: 3px solid var(--light-grey-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 10vh;
+  position: relative;
+  background-size: 400%, 400%;
+  animation:bg 6s ease-in-out infinite;
+  }
+
+#welcomeText {
+  font-size: 4em;
+  color: var(--light-grey-text);
+  padding-left: 5vw;
+}
+
+#myName {
+  font-size: 4.5em;
+  color: var(--orange);
+  padding-left: 5vw;
+}
+
+#myName::after{
+  content: '.';
+  color: var(--light-grey-text);
+}
+
+#welcomeBtnsDiv {
+  display: flex;
+  padding-top: 2em;
+  padding-left: 5vw;
+}
+
+.btnsAnchor {
+  text-decoration: none;
+}
+
+.welcomeBtns {
+  margin-left: 1em;
+  font-size: 1.9em;
+  border-radius: 5px;
+  padding: 0.2em;
+  background-color: var(--dark-navy);
+  color: var(--light-grey-text);
+  box-shadow: 0.5px 0.5px 2px var(--orange);
+}
+
+.welcomeBtns:hover, .welcomeBtns:focus-within {
+  color: var(--orange);
+}
+
+#resumeBtn {
+  margin-left: 0.5em;
+}
+
+#subText {
+  color: var(--light-grey-text);
+  padding-left: 5vw;
+}
+
+#arrow {
+  display: flex;
+  margin-top: 5vh;
+  animation: movingArrow 1000ms ease-in infinite;
+}
+
+#arrowImg {
+  width: 8vw;
+  height: 8vh;
+}
+
+#arrowDiv {
+  display: flex;
+  justify-content: center;
+  padding-left: 0vw;
+}
+
+#about {
+  min-height: 100vh;
+  background: var(--light-grey-text);
+  padding-top: 5vh;
+  padding-left: 3vw;
+  padding-bottom: 12vh;
+}
+
+.sectionTitle {
+  color: var(--dark-navy);
+  margin-top: 5vh;
+}
+
+.sectionTitle::after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  width: 40vw;
+  background-color: var(--dark-navy);
+  margin-left: 2vw;
+}
+
+#aboutTextDiv {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.aboutText {
+  text-align: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  font-size: 1.5rem;
+  color: var(--light-navy);
+  padding-bottom: 1em;
+}
+
+span {
+  color: var(--orange);
+  font-size: 1.6rem;
+  text-decoration: underline;
+}
+
+#sectionSubTitle {
+  position: absolute;
+  color: var(--light-navy);
+  right: 5vw;
+  margin-bottom: 5vh;
+}
+
+#sectionSubTitle::before {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  width: 40vw;
+  background-color: var(--dark-navy);
+  margin-right: 2vw;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    scroll-padding-top: 8vh;
+  }
+
+  #menu {
+    font-size: 0.8em;
+    transform: translateY(-3vh);
+  }
+
+  header {
+    display: block;
+    padding-bottom: 3.2vh;
+  }
+
+  #welcome {
+    height: 100%;
+  }
+
+  #welcomeText {
+    font-size: 2em;
+    color: var(--light-grey-text);
+    padding-left: 5vw;
+  }
+
+  #myName {
+    font-size: 3em;
+    color: var(--orange);
+    padding-left: 5vw;
+  }
+
+ 
+  .welcomeBtns {
+    font-size: 1em;
+  }
+
+  #arrow {
+    width: 8vw;
+    height: 8vh;
+    margin-top: 5vh;
+  }
+}
+
+@media screen and (max-height: 320px) {
+
+  #welcomeText {
+    font-size: 2em;
+    color: var(--light-grey-text);
+    padding-left: 5vw;
+    padding-top: 20vh;
+  }
+
+  #myName {
+    font-size: 3em;
+    color: var(--orange);
+    padding-left: 5vw;
+  }
+
+ 
+  .welcomeBtns {
+    font-size: 1em;
+  }
+
+  #arrow {
+    width: 8vw;
+    height: 8vh;
+    margin-top: 5vh;
+  }
+}
+
+@keyframes movingArrow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bg {
+  0% {
+    background-position: 0, 50%;
+  }
+
+  50% {
+    background-position: 100%, 50%;
+  }
+
+  100% {
+    background-position: 0, 50%;
+  }
+  
+}
+
+#boxsDivs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  margin-top: 10vh;
+  justify-content: center;
+}
+
+.tools {
+  width: 200px;
+  margin-right: 2.5vw;
+  margin-left: 2.5vw;
+  text-align: center;
+  border: solid var(--orange) 4px;
+  border-radius: 15px;
+  margin-bottom: 3vh;
+}
+
+.titleTools {
+  color: var(--light-grey-text);
+  background-color: var(--light-navy);
+  border: solid var(--orange) 3px;
+  border-radius: 15px;
+  font-size: 1.5em;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.icons {
+  filter: brightness(0) saturate(100%) invert(61%) sepia(82%) saturate(3585%) hue-rotate(331deg) brightness(97%) contrast(94%);
+  display: flex;
+  flex-direction: column;
+  width: 7vw;
+  height: 7vh;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1.5vh;
+  margin-bottom: 0.5vh;
+}
+
+.iconDiv {
+  margin: 10px;
+  padding-bottom: 5px;
+}
+
+.iconDiv:hover {
+  background-color: var(--blue);
+  border-radius: 15px;
+}
+
+#html:hover::before {
+  content:"HTML";
+  font-size: 1.5em;
+  color: var(--light-grey-text)
+}
+
+#html:hover::after{
+  content:"Semantic";
+  color: var(--light-grey-text);
+  font-size: 1.1em;
+  position: relative;
+  bottom: 3px;
+}
+
+#css:hover::before {
+  content:"CSS";
+  font-size: 1.5em;
+  color: var(--light-grey-text)
+}
+
+#css:hover::after {
+  content:"Responsive";
+  white-space: pre;
+  color: var(--light-grey-text);
+  font-size: 1.1em;
+  position: relative;
+  bottom: 3px;
+}
+
+#js:hover::before {
+  content:"Javacript";
+  font-size: 1.5em;
+  color: var(--light-grey-text)
+}
+
+#js:hover::after {
+  content:"DOM";
+  color: var(--light-grey-text);
+  font-size: 1.1em;
+  position: relative;
+  bottom: 3px;
+}
+
+#react:hover::before {
+  content:"React";
+  font-size: 1.5em;
+  color: var(--light-grey-text)
+}
+
+#react:hover::after{
+  content:"Functional Component; \A Class Components; \A Redux; \A Context API/Hooks; \A React Testing Library.";
+  white-space: pre;
+  color: var(--light-grey-text);
+  font-size: 1.1em;
+  position: relative;
+  bottom: 3px;
+}
+
+#docker:hover::before {
+  content:"Docker";
+  font-size: 1.5em;
+  color: var(--light-grey-text)
+}
+
+#mysql:hover::before {
+  content:"MySQL";
+  font-size: 1.5em;
+  color: var(--light-grey-text)
+}
+
+#bash:hover::before{
+  content:"Bash";
+  font-size: 1.5em;
+  color: var(--light-grey-text)
+}
+
+#github:hover::before {
+  content:"GitHub";
+  font-size: 1.5em;
+  color: var(--light-grey-text)
+}
+
+#github:hover::after {
+  content:"Git";
+  color: var(--light-grey-text);
+  font-size: 1.1em;
+  position: relative;
+  bottom: 3px;
+}
+
+#scrum:hover::before {
+  content:"SCRUM";
+  font-size: 1.5em;
+  color: var(--light-grey-text)
+}
+
+#scrum:hover::after {
+  content:"Kanban";
+  color: var(--light-grey-text);
+  font-size: 1.1em;
+  position: relative;
+  bottom: 3px;
+}
+
+#jest:hover::before{
+  content:"Jest";
+  font-size: 1.5em;
+  color: var(--light-grey-text)
+}
+
+@media(pointer: coarse) {
+  .iconDiv {
+    background-color: var(--orange);
+    border-radius: 15px;
+  }
+
+  .iconDiv:hover {
+    background-color: var(--orange);
+    border-radius: 15px;
+  }
+
+  .iconDiv .icons {
+    filter: brightness(0) saturate(100%) invert(12%) sepia(5%) saturate(4885%) hue-rotate(178deg) brightness(88%) contrast(79%);
+  }
+  
+  #html::before {
+    content:"HTML";
+    font-size: 1.5em;
+    color: var(--light-navy)
+  }
+  
+  #html::after {
+    content:"Semantic";
+    color: var(--light-grey-text);
+    font-size: 1.1em;
+    position: relative;
+    bottom: 3px;
+  }
+  
+  #css::before {
+    content:"CSS";
+    font-size: 1.5em;
+    color: var(--light-navy);
+  }
+  
+  #css::after {
+    content:"Responsive";
+    color: var(--light-grey-text);
+    font-size: 1.1em;
+    position: relative;
+    bottom: 3px;
+  }
+  
+  #js::before {
+    content:"Javacript";
+    font-size: 1.5em;
+    color: var(--light-navy);
+  }
+  
+  #js::after {
+    content:"DOM";
+    color: var(--light-grey-text);
+    font-size: 1.1em;
+    position: relative;
+    bottom: 3px;
+  }
+  
+  #react::before {
+    content:"React";
+    font-size: 1.5em;
+    color: var(--light-navy);
+  }
+  
+  #react::after {
+    content:"Functional Component; \A Class Components; \A Redux; \A Context API/Hooks; \A React Testing Library.";
+    white-space: pre;
+    color: var(--light-grey-text);
+    font-size: 1.1em;
+    position: relative;
+    bottom: 3px;
+  }
+  
+  #docker::before {
+    content:"Docker";
+    font-size: 1.5em;
+    color: var(--light-navy);
+  }
+  
+  #mysql::before {
+    content:"MySQL";
+    font-size: 1.5em;
+    color: var(--light-navy);
+  }
+  
+  #bash::before {
+    content:"Bash";
+    font-size: 1.5em;
+    color: var(--light-navy);
+  }
+  
+  #github::before {
+    content:"GitHub";
+    font-size: 1.5em;
+    color: var(--light-navy);
+  }
+  
+  #github::after {
+    content:"Git";
+    color: var(--light-grey-text);
+    font-size: 1.1em;
+    position: relative;
+    bottom: 3px;
+  }
+  
+  #scrum::before {
+    content:"SCRUM";
+    font-size: 1.5em;
+    color: var(--light-navy);
+  }
+  
+  #scrum::after {
+    content:"Kanban";
+    color: var(--light-grey-text);
+    font-size: 1.1em;
+    position: relative;
+    bottom: 3px;
+  }
+  
+  #jest::before {
+    content:"Jest";
+    font-size: 1.5em;
+    color: var(--light-navy);
+  }
+}
+
+#education {
+  background-color: var(--blue);
+  position: relative;
+  margin-top: -3vh;
+}
+
+#education::before {
+  position: absolute;
+  content: '';
+  width: 9vw;
+  height: 9vw;
+  right:50%;
+  transform: skew(0, 30deg);
+  bottom: -4vh;
+  background-color: var(--blue);
+  z-index: -1;
+}
+#education::after {
+  position: absolute;
+  content: '';
+  width: 9vw;
+  height: 9vw;
+  left: 50%;
+  transform: skew(0, -30deg);
+  bottom: -4vh;
+  background-color: var(--blue);
+  z-index: -1;
+}
+
+#timelineDiv {
+  width: 70vw;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15vh;
+}
+
+#educationTitle {
+  color: var(--light-grey-text);
+}
+
+#educationTitle::after {
+  content: '';
+  display: inline-block;
+  width: 70vw;
+  height: 1px;
+  background-color: var(--light-grey-text);
+  margin-top: 3vh;
+  margin-bottom: 10vh;
+}
+
+.educationExperience {
+  display: flex;
+  justify-content: center;
+}
+
+.leftEducation {
+  border-right:solid 1px var(--light-grey-text);
+  padding-right: 2vw;
+  width: 50%;
+  text-align: right;
+  color: var(--light-grey-text);
+  font-size: 1 em;
+  padding-bottom: 10vh;
+}
+
+.rightEducation {
+  width: 50%;
+  padding-left: 2vw;
+  text-align: left;
+  color: var(--light-grey-text);
+}
+
+.school {
+  margin-bottom: 1.5vh;
+}
+
+.educationDescription {
+  margin-bottom: 5vh;
+}
+
+.graduation::after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  display: flex;
+  background-color: var(--orange);
+}
+
+.educationYear {
+  color: var(--orange);
+}
+
+#projects {
+  min-height: 100vh;
+  background-color: var(--light-grey-text);
+  position: relative;
+  z-index: -2;
+  padding-top: 10vh;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.projectTitle {
+  margin-top: 2vh;
+  margin-bottom: 5vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#cardsDiv {
+  max-width: 80vw;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sectorDiv {
+  margin: 2vw;
+}
+
+.card {
+  width: 230px;
+  height: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  border: solid black 1px;
+  margin-top: 25px;
+  background-image:url(./images/bgimg.jpg);
+  color: var(--light-grey-text);
+  align-items: flex-end;
+  display: flex;
+  overflow: hidden;
+  transition: transform 500ms ease;
+}
+
+.card:hover, .card:focus-within {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding-right: 2vw;
+  padding-left: 2vw;
+  padding-bottom: 1.3vh;
+  background: linear-gradient(
+    hsl( 0 0% 0% / 0), 
+    hsl( 0 0% 0% / 0.3) 7%, 
+    hsl(0 0% 0% / 1));
+  text-align: start;
+  width: 230px;
+
+}
+
+@media (hover) {
+  .cardContent {
+      transform: translateY(82%);
+      transition: transform 500ms ease;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card:hover .cardContent, .card:focus-within .cardContent {
+  transform: translateY(0);
+}
+
+.cardTitle {
+  color: rgb(255 255 255 / 0.9);
+  margin-bottom: 2vh;
+}
+
+.cardText {
+  margin-bottom: 2vh;
+  color: rgb(255 255 255 / 0.9);
+}
+
+.cardButton {
+  background-color: var(--orange);
+  text-decoration: none;
+  color: var(--dark-navy);
+  padding: 1vh;
+  margin: 0.3em;
+  border-radius: 7px;
+}
+
+.cardButton:hover, .cardButton:focus-within {
+  background-color: var(--light-grey-text);
+  color: var(--blue);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::after, *::before {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0ms !important;
+  }
+}
+
+.cardLimits {
+  position: relative;
+  width: 230px;
+}
+
+.tag {
+  max-width: 25px;
+  max-height: 25px;
+  width: 7vh;
+  height: 7vh;
+  position:relative;
+  right: 0.5vw;
+  top: 3vh;
+  background-color: var(--orange);
+  border-radius: 50%;
+  margin: 0.2vw;
+  margin-bottom: 1vh;
+}
+
+.tag:hover {
+transform: scale(1.3);
+}
+
+.tagsDiv {
+  position: absolute;
+  right: 0.5vw;
+  top: -2vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#contact {
+  min-height: 60vh;
+  background-color: black;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#contactTitle {
+  color: var(--light-grey-text);
+  padding-top: 9vh;
 }
+
+#contactTitle::after {
+  content: '';
+  display: block;
+  width: 70vw;
+  height: 1px;
+  background-color: var(--light-grey-text);
+  margin-top: 3vh;
+  margin-right: auto;
+  margin-left: auto;
+  }

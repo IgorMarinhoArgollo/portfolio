@@ -1,4 +1,4 @@
-import './App.css';
+import './index.css';
 import imgArrow from './images/arrow.svg';
 import imgBash from './images/bash.svg';
 import imgCss from './images/css.svg';

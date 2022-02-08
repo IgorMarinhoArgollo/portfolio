@@ -282,15 +282,23 @@ function App() {
               </div>
               <form id='contactForm' name='contactForm' action='/' method='POST'>
                 <input type='hidden' name='form-name' value='contactForm'/>
-                <label htmlFor='name'>Name:
-                  <input required type='text' name='name' placeholder='Your Name' />
-                </label>
-                <label htmlFor='email'>Email:
-                  <input required type='email' name='email' placeholder='Your Email'/>
-                </label>
-                <label htmlFor='message'>Message:
-                  <textarea required type='text' name='message' placeholder='Your Message' cols='30' rows='10'></textarea>
-                </label>
+
+                <div class='inputField'>
+                  <p class='inputLabel'>Name:</p>
+                  <input required type='text' name='name'/>
+                </div>
+
+                <div class='inputField'>
+                  <p class='inputLabel'>Email:</p>
+                  <input required type='email' name='email'/>
+                </div>
+
+                <div class='inputField'>
+                  <p class='inputLabel'>Message:</p>
+                  <textarea required type='text' name='message' cols='30' rows='10'></textarea>
+                  </div>
+
+                  
                 <button type='submit'>Submit</button>
               </form>
             </div>

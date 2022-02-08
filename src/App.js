@@ -289,7 +289,7 @@ function App() {
                   <input required type='email' name='email' placeholder='Your Email'/>
                 </label>
                 <label htmlFor='message'>Message:
-                  <textarea required type='text' name='name' placeholder='Your Message' cols='30' rows='10'></textarea>
+                  <textarea required type='text' name='message' placeholder='Your Message' cols='30' rows='10'></textarea>
                 </label>
                 <button type='submit'>Submit</button>
               </form>

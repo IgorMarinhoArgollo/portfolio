@@ -39,7 +39,7 @@ background-color: #4A5A69;
 }
 
 html {
-  scroll-padding-top: 6vh;
+  scroll-padding-top: 9vh;
   scroll-behavior: smooth;
 }
 
@@ -306,13 +306,14 @@ span {
   }
 }
 
-@media screen and (max-height: 320px) {
+@media screen and (max-height: 400px) {
 
   #welcomeText {
     font-size: 2em;
     color: var(--light-grey-text);
     padding-left: 5vw;
     padding-top: 20vh;
+    margin-top: 4vh;
   }
 
   #myName {

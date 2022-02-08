@@ -451,14 +451,9 @@ span {
     margin-bottom: 2.5vh;
   }
 
-  .iconDiv:hover {
-    background-color: var(--orange);
-    border-radius: 15px;
-  }
-
   .iconDiv:hover .icons{
-    filter: brightness(0) saturate(100%) invert(17%) sepia(15%) saturate(941%) hue-rotate(177deg) brightness(96%) contrast(93%);
-  }
+    filter: brightness(0) saturate(100%) invert(59%) sepia(40%) saturate(5826%) hue-rotate(333deg) brightness(99%) contrast(89%);
+    }
 
   
   #html::before {

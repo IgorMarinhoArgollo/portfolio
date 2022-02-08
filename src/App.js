@@ -278,6 +278,12 @@ function App() {
                 <p>linkedin.com/in/igormarinhoargollo/</p>
                 </a>
                 </div>
+                <div class='info'>
+                <img src={imgGithub} alt='GitHub Icon' class='contactIcon'/>
+                <a href='https://github.com/IgorMarinhoArgollo' target='_blank' rel='noreferrer'>
+                <p>github.com/IgorMarinhoArgollo</p>
+                </a>
+                </div>
 
               </div>
               <form id='contactForm' name='contactForm' action='/' method='POST'>

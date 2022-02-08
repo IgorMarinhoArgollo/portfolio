@@ -78,10 +78,9 @@ main {
 }
 
 #menu li {
-  padding-right: 10px;
   font-family: 'Poppins', sans-serif;
   padding-top: 2vh;
-  margin-right: 15px;
+  margin-right: 1vw;
 }
 
 #menu li:hover, #menu li:focus-within {
@@ -127,7 +126,7 @@ main {
 }
 
 .welcomeBtns {
-  margin-left: 1em;
+  margin-left: 0.6vw;
   font-size: 1.6em;
   border-radius: 5px;
   padding: 0.2em;
@@ -379,82 +378,70 @@ span {
   height: 6vh;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 1.5vh;
-  margin-bottom: 0.5vh;
+  margin-bottom: 4vh;
 }
 
-.iconDiv {
-  margin: 10px;
-  padding-bottom: 5px;
-  margin-bottom: 2vh;
-}
-
-.iconDiv:hover .icons {
-  filter: brightness(0) saturate(100%) invert(43%) sepia(32%) saturate(3208%) hue-rotate(337deg) brightness(112%) contrast(88%);
+.icons:hover {
+  filter: brightness(0) saturate(100%) invert(55%) sepia(68%) saturate(3830%) hue-rotate(334deg) brightness(102%) contrast(88%);
 }
 
 .iconDiv:hover {
-  background-color: var(--blue);
-  border-radius: 15px;
+  transform: scale(1.05);
 }
 
-#html:hover::before {
+
+#html::before {
   content:"HTML";
-  color: var(--light-grey-text)
+  color: var(--light-navy)
 }
 
-#html:hover {
-  content:"HTML";
-  color: var(--light-grey-text)
-}
-
-#css:hover::before {
+#css::before {
   content:"CSS";
-  color: var(--light-grey-text)
+  color: var(--light-navy)
 }
 
-#js:hover::before {
+#js::before {
   content:"JavaScript";
-  color: var(--light-grey-text)
+  color: var(--light-navy)
 }
 
 
-#react:hover::before {
+#react::before {
   content:"React";
-  color: var(--light-grey-text)
+  color: var(--light-navy)
 }
 
 
-#docker:hover::before {
+#docker::before {
   content:"Docker";
-  color: var(--light-grey-text)
+  color: var(--light-navy)
 }
 
-#mysql:hover::before {
+#mysql::before {
   content:"MySQL";
   font-size: 0.8em;
-  color: var(--light-grey-text)
+  color: var(--light-navy)
 }
 
-#bash:hover::before{
+#bash::before{
   content:"Bash";
-  color: var(--light-grey-text)
+  color: var(--light-navy)
 }
 
-#github:hover::before {
+#github::before {
   content:"GitHub";
-  color: var(--light-grey-text)
+  color: var(--light-navy)
 }
 
-#scrum:hover::before {
+#scrum::before {
   content:"SCRUM";
-  color: var(--light-grey-text)
+  color: var(--light-navy)
 }
 
 
-#jest:hover::before{
+#jest::before{
   content:"Jest";
-  color: var(--light-grey-text)
+  color: var(--light-navy)
 }
 
 @media(pointer: coarse) {
@@ -769,9 +756,6 @@ span {
   margin-bottom: 1vh;
 }
 
-.tag:hover {
-transform: scale(1.3);
-}
 
 .tagsDiv {
   position: absolute;

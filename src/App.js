@@ -11,9 +11,8 @@ import imgMysql from './images/mySQL.svg';
 import imgReact from './images/react.svg';
 import imgScrum from './images/scrum.svg';
 import imgMail from './images/mail.svg';
-import imgWhatsapp from './images/whatsapp.svg';
 import imgLinkedin from './images/linkedin.svg';
-import imgPhone from './images/phone.svg';
+import imgRtl from './images/octopus.png';
 
 function App() {
   return (
@@ -55,12 +54,23 @@ function App() {
             <h1 id="welcomeText"> Hi, I'm </h1>
             <h1 id="myName">Igor Marinho</h1>
             <h2 id="subText">Curious by nature, web developer by passion.</h2>
+            <div class="links">
+              <a href='mailto:igormarinhoargollo@gmail.com'>
+                <img src={imgMail} alt='Email Icon' class='contactIcon'/>
+              </a>
+              <a href='https://www.linkedin.com/in/igormarinhoargollo/' target='_blank' rel='noreferrer'>
+                <img src={imgLinkedin} alt='Linkedin Icon' class='contactIcon'/>
+              </a>
+              <a href='https://github.com/IgorMarinhoArgollo' target='_blank' rel='noreferrer'>
+                <img src={imgGithub} alt='GitHub Icon' class='contactIcon'/>
+              </a>
+            </div>
             <div id="welcomeBtnsDiv">
               <a href="#top" class="btnsAnchor">
-                <p class="welcomeBtns">Resume</p>
+                <p class="welcomeBtns">RESUME</p>
               </a>
               <a href="#contact" class="btnsAnchor">
-                <p class="welcomeBtns">Contact</p>
+                <p class="welcomeBtns">CONTACT</p>
               </a>
             </div>
             <div id="arrowDiv">
@@ -115,6 +125,9 @@ function App() {
                 <div class="iconDiv" id="jest">
                   <img src={imgJest} class="icons" alt="Jest Icon"/>
                 </div>
+                <div class="iconDiv" id="rtl">
+                  <img src={imgRtl} class="icons" alt="RTL Icon"/>
+                </div>
               </article>
             </div>
           </section>
@@ -156,7 +169,7 @@ function App() {
             <h1 class="projectTitle">Projects</h1>
             <div id="cardsDiv">
               <div class="sectorDiv">
-                <h1 class="projectDivsCard">Front End Projects</h1>
+                <h1 class="projectDivsCard">FrontEnd Projects</h1>
                 <div class="cardLimits">
                   <div class="card">
                     <div class="cardContent">
@@ -187,7 +200,7 @@ function App() {
                 </div>
               </div>
               <div class="sectorDiv">
-                <h1 class="projectDivsCard">Back End Projects</h1>
+                <h1 class="projectDivsCard">BackEnd Projects</h1>
                 <div class="cardLimits">
                   <div class="card">
                     <div class="cardContent">
@@ -255,36 +268,20 @@ function App() {
             <div id='contentDivisor'>
               <div id='contactInfo'>
                 <div class='info'>
-                  <img src={imgMail} alt='Email Icon' class='contactIcon'/>
                   <a href='mailto:igormarinhoargollo@gmail.com'>
-                  <p> igormarinhoargollo@gmail.com </p>
+                  <img src={imgMail} alt='Email Icon' class='contactIcon'/>                  
                   </a>
                 </div>
                 <div class='info'>
-                <img src={imgWhatsapp} alt='Whatsapp Icon' class='contactIcon'/>
-                <a href='https://wa.me/5571987562838' target='_blank' rel='noreferrer'>
-                <p> +55 71 9 8756-2838</p>
-                </a>
-                </div>
-                <div class='info'>
-                <img src={imgPhone} alt='Telephone Icon' class='contactIcon'/>
-                <a href='tel:+5571987562838' target='_blank' rel='noreferrer'>
-                <p> +55 71 9 8756-2838</p>
-                </a>
-                </div>
-                <div class='info'>
-                <img src={imgLinkedin} alt='Linkedin Icon' class='contactIcon'/>
                 <a href='https://www.linkedin.com/in/igormarinhoargollo/' target='_blank' rel='noreferrer'>
-                <p>linkedin.com/in/igormarinhoargollo/</p>
+                <img src={imgLinkedin} alt='Linkedin Icon' class='contactIcon'/>
                 </a>
                 </div>
                 <div class='info'>
-                <img src={imgGithub} alt='GitHub Icon' class='contactIcon'/>
                 <a href='https://github.com/IgorMarinhoArgollo' target='_blank' rel='noreferrer'>
-                <p>github.com/IgorMarinhoArgollo</p>
+                <img src={imgGithub} alt='GitHub Icon' class='contactIcon'/>
                 </a>
                 </div>
-
               </div>
               <form id='contactForm' name='contactForm' action='/' method='POST'>
                 <input type='hidden' name='form-name' value='contactForm'/>

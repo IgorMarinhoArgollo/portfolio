@@ -54,7 +54,7 @@ function App() {
           <section id="welcome">
             <h1 id="welcomeText"> Hi, I'm </h1>
             <h1 id="myName">Igor Marinho</h1>
-            <h2 id="subText">Curios by nature, web developer for passion.</h2>
+            <h2 id="subText">Curious by nature, web developer by passion.</h2>
             <div id="welcomeBtnsDiv">
               <a href="#top" class="btnsAnchor">
                 <p class="welcomeBtns">Resume</p>
@@ -75,7 +75,7 @@ function App() {
               <p class="aboutText">I'm a civil engineer who discovered the thrill of programming, then decided to change careers.</p>
               <p class="aboutText">Today I am a <span>full-stack web developer</span> ready to help you out.</p>
             </div>
-            <h2 id="sectionSubTitle">Tool's Box</h2>
+            <h2 id="sectionSubTitle">Tool Box</h2>
             <div id="boxsDivs">
               <article class="tools">
                 <h2 class="titleTools">FrontEnd</h2>
